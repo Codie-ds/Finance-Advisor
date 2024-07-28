@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playwrite+BE+VLG:wght@100..400&display=swap');
 
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900
@@ -10,6 +10,16 @@
   font-style: normal;
   font-variation-settings:
     "slnt" 0;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 400
+
+.playwrite-be-vlg-<uniquifier> {
+  font-family: "Playwrite BE VLG", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 
 :root{
@@ -28,67 +38,133 @@ body{
 }
 
 .nav-section{
-    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+}
+
+.company{
+    display: flex;
+    margin-left: 2rem;
 }
 
 .company-logo{
     height: 60px;
     width: 60px;
-    margin-left: 3rem;
-    margin-top: 0.5rem;
+}
+
+.company-name{
+    margin-top: 1rem;
+    font-family: "Playwrite BE VLG";
+    font-size: 1.5rem;
+    color: rgb(227, 11, 11);
+}
+
+.hamburger-menu{
+    margin-right: 2rem;
+}
+
+.menu-icon{
+    margin-top: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 4rem;
-    gap: 2rem;
-}
-
-#nav-links{
-    list-style: none;
-    font-size: 1.23rem;
-    font-family: "Inter";
-    cursor: pointer;
-}
-
-#nav-links:hover{
-    color: blueviolet;
+    visibility: hidden;
 }
 
 ._login-signIn{
-    display: flex;
-    gap: 0.8rem;
-    margin-right: 1rem;
-    justify-content: center;
-    align-items: center;
+    visibility: hidden;
 }
 
-#login-btn,
-#signIn-btn{
-    padding: 0.3rem 0.7rem;
-    font-size: 1.3rem;
-    font-family: "Inter";
-    background-color: #4488EF;
-    border: none;
-    border-radius: 0.6rem;
-    font-weight: 500;
-    cursor: pointer;
-}
+@media screen and (min-width:1270px) {
+    .nav-section{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .nav{
+        visibility: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 4rem;
+        gap: 2rem;
+    }
+    
+    #nav-links{
+        list-style: none;
+        font-size: 1.23rem;
+        font-family: "Inter";
+        cursor: pointer;
+    }
+    
+    #nav-links:hover{
+        color: blueviolet;
+    }
+    
+    ._login-signIn{
+        visibility: visible;
+        display: flex;
+        gap: 0.8rem;
+        margin-right: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #login-btn,
+    #signIn-btn{
+        padding: 0.3rem 0.7rem;
+        font-size: 1.3rem;
+        font-family: "Inter";
+        background-color: #83aae5;
+        border: none;
+        border-radius: 0.6rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    
+    #signIn-btn{
+        background-color: var(--background);
+        border: 1px dashed black;
+    }
+    
+    #login-btn:hover{
+        animation-name: slideIn;
+        animation-duration: 2.5s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        background-color: beige;
+        box-shadow: 0px -5px 5px #a3c2f3 inset;
+        border-bottom: 1px solid black;
+    }
+    
+    #signIn-btn:hover{
+        animation-name: slideIn;
+        animation-duration: 2.5s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        background-color: beige;
+        box-shadow: 0px -3px 3px #a3c2f3 inset;
+        border-bottom: 1px solid black;
+    }
+    
+    @keyframes slideIn {
+        0%{
+            background-color: #fff;
+            box-shadow: 0px -3px 3px #a3c2f3 inset;
+            border-bottom: 1px solid black;
+        }
+        50%{
+            box-shadow: 3px 3px 3px #a3c2f3 inset;
+            border-bottom: 1px solid black;
+        }
+    }
 
-#signIn-btn{
-    background-color: var(--background);
-    border: 1px dashed black;
-}
-
-#login-btn:hover{
-    background-color: #a3c2f3;
-}
-
-#signIn-btn:hover{
-    background-color: beige;
+    .hamburger-menu{
+        position: absolute;
+        visibility: hidden;
+    }
 }
