@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playwrite+BE+VLG:wght@100..400&display=swap');
 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900 */
 
 .inter-<uniquifier> {
   font-family: "Inter", sans-serif;
@@ -12,8 +12,8 @@
     "slnt" 0;
 }
 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 400
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 400 */
 
 .playwrite-be-vlg-<uniquifier> {
   font-family: "Playwrite BE VLG", cursive;
