@@ -40,6 +40,7 @@ body{
 .nav-section{
     display: flex;
     justify-content: space-between;
+    height: 15vh;
 }
 
 .company{
@@ -78,18 +79,22 @@ body{
 
 @media screen and (min-width:1270px) {
     .nav-section{
+<<<<<<< HEAD
         position: fixed;
+=======
+        height: 100px;
+        position: relative;
+>>>>>>> typo/create-main-page
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-between;  
     }
     
     .nav{
         visibility: visible;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-top: 1.6rem;
         margin-left: 4rem;
         gap: 2rem;
     }
@@ -110,12 +115,12 @@ body{
         display: flex;
         gap: 0.8rem;
         margin-right: 1rem;
-        justify-content: center;
-        align-items: center;
+        margin-top: 1rem;
     }
     
     #login-btn,
     #signIn-btn{
+        height: 3rem;
         padding: 0.3rem 0.7rem;
         font-size: 1.3rem;
         font-family: "Inter";
@@ -168,3 +173,93 @@ body{
         visibility: hidden;
     }
 }
+
+/* create main content */
+
+.main-section{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-content{
+    margin-right: 4rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-heading{
+    font-family: "Inter";
+    font-size: 3rem;
+    font-weight: 550;
+    line-height: 1.268;
+}
+
+.heading-summary{
+    font-family: "Inter";
+    font-weight: 350;
+}
+
+.Explore-more-content-button{
+    display: flex;    
+}
+
+.Explore-btn{
+    font-family: "Inter";
+    padding: 0.7rem 1.2rem;
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    padding-right: 3rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px pink;
+
+    display: block;
+
+    background: linear-gradient(to right, rgb(206, 206, 87) 50%, rgb(226, 226, 19) 50%);
+    background-size: 200%  100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+
+.Explore-more-content-button p{
+    font-size: 1.3rem;
+    font-weight: 600;
+    transform: translateX(-30px);
+    margin-top: 0.6rem;
+    transition: all .6s ease-out;
+    display: block;
+    cursor: pointer;
+}
+
+.Explore-btn:hover{
+    background-position: left bottom;
+    box-shadow: 3px 3px 6px pink;
+}
+
+.finance-img{
+    height: 40vh;
+    width: 50vw;
+}
+
+@media screen and (min-width:1270px) {
+    .main-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 2rem;
+    }
+
+    .left-content{
+        width: 50%;
+    }
+
+    .finance-img{
+        height: 55vh;
+        width: 30vw;
+    }
+}
+
