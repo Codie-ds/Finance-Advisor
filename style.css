@@ -245,6 +245,49 @@ body{
     width: 50vw;
 }
 
+.left-content{
+    animation: 1s linear 0s MoveRight;
+}
+
+@keyframes MoveRight {
+    0%{
+        opacity: 0.1;
+        transform: translateX(-100%);
+    }
+
+    50%{
+        opacity: 0.5;
+        transform: translateX(-50%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.right-content{
+    animation: 1s linear 0s MoveLeft;
+}
+
+@keyframes MoveLeft {
+    0%{
+        opacity: 0.1;
+        transform: translateX(100%);
+    }
+
+    50%{
+        opacity: 0.5;
+        transform: translateX(50%);
+        transform: scaleY(30%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
 @media screen and (min-width:1270px) {
     .main-section{
         display: flex;
@@ -262,4 +305,3 @@ body{
         width: 30vw;
     }
 }
-
